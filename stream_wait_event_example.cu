@@ -1,12 +1,5 @@
-/* 
+/*
  * Compile: nvcc -o stream_wait_event_example stream_wait_event_example.cu && nsys profile -o profile_result  --force-overwrite true ./stream_wait_event_example
- * 
- * This example code demonstrates cross-stream timing where:
- * 1. Events are recorded on stream 0
- * 2. Graph executes on a different stream (let's call it graph stream)
- * 3. cudaStreamWaitEvent ensures stream 0 waits for graph completion
- * 4. Final event records the true end time
- * 
  */
 
 #include <cuda_runtime.h>
